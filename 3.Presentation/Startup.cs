@@ -29,7 +29,7 @@ namespace _3_Presentation
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<FootballContext>(options => options.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=FootballTimeApp;Trusted_Connection=True;MultipleActiveResultSets=true"));
+            services.AddDbContext<FootballContext>(options => options.UseSqlServer(@"Server=tcp:footballtime.database.windows.net,1433;Initial Catalog=footballtime;Persist Security Info=False;User ID=AlfaStar95;Password=Dbnustiu123@;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"));
             // Add framework services.
             services.AddMvc();
 
@@ -58,6 +58,7 @@ namespace _3_Presentation
             }
             else
             {
+                //app.UseDeveloperExceptionPage();
                 app.UseExceptionHandler("/Home/Error");
             }
 
