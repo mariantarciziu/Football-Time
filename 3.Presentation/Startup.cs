@@ -43,6 +43,11 @@ namespace _3_Presentation
             services.AddTransient<IOnThisDayService, OnThisDayService>();
             services.AddTransient<IQuizService, QuizService>();
             services.AddTransient<IPostService, PostService>();
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info { Title = "FootballTime API", Version = "v1" });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -63,6 +68,15 @@ namespace _3_Presentation
             }
 
             app.UseStaticFiles();
+
+            app.UseSwagger();
+
+            // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), 
+            // specifying the Swagger JSON endpoint.
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+            });
 
             app.UseMvc(routes =>
             {
