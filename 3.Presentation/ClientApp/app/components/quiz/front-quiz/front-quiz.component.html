@@ -1,0 +1,6 @@
+<div class="thumbnail" (click)="openQuizProfile()">
+    <img *ngIf="quiz.imageSource" src="{{quiz.imageSource}}" alt="">
+    <img *ngIf="!quiz.imageSource" src="https://images2.imgbox.com/92/77/FPyWGbNp_o.jpg" alt="">        
+    <div class="captionn text-center" (click)="openQuizProfile()">{{quiz.title}}</div>
+</div>
+

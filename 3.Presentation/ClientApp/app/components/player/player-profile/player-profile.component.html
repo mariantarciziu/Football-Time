@@ -1,0 +1,62 @@
+<div class="title">{{player.name}}</div>
+<div class="content">
+    <div class="row">
+        <div class="col-xs-12 col-sm-5 col-md-6">
+            <div class="thumbnail">
+                <img *ngIf="player.imageSource" src="{{player.imageSource}}" alt="">
+                <img *ngIf="!player.imageSource" src="https://images2.imgbox.com/62/76/R3Sibibm_o.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-7 col-md-6">
+            <p><span>Name: </span>{{player.name}}</p>
+            <p><span>Current Team: </span>{{player.currentTeam}}</p>
+            <p><span>Age: </span>{{age}} years old</p>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="row">
+    <div class="col-xs-12 col-sm-6">
+        <div class="title">Info</div>
+        <div class="content">
+            <p><span>Date of birth: </span>{{player.birthDay | date : 'dd-MM-yyyy'}}</p>
+            <p><span>Position: </span>{{player.position}}</p>
+            <p><span>Country: </span>{{player.nationality}}</p>
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-6">
+        <div class="title">Details</div>
+        <div class="content">
+            <p><span>League: </span>{{player.league}}</p>
+            <p><span>Height: </span>{{player.height}} cm</p>
+            <p><span>Weight: </span>{{player.weight}} kg</p>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="strengths.length > 0  || weaknesses.length > 0" class="row">
+    <div class="col-xs-12 col-sm-6">
+        <div class="title">Strengths</div>
+        <div class="content characteristics">
+            <p *ngFor='let strength of strengths'>{{strength}}</p>
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-6">
+        <div class="title">Weaknesses</div>
+        <div class="content characteristics">
+            <p *ngFor='let weakness of weaknesses'>{{weakness}}</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+

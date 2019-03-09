@@ -1,0 +1,77 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar-header">
+        <a class="nav-link navbar-brand" routerLinkActive="active" [routerLink]="['']">Football Time <span class="sr-only">(current)</span></a>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+
+    </div>
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <li><a class="nav-link" (click)="removeForms();showPlayerForm = true;"> Add Players <span class="sr-only">(current)</span></a></li>
+            <li><a class="nav-link" (click)="removeForms();showTeamForm = true;"> Add Teams</a></li>
+            <li><a class="nav-link" (click)="removeForms();showPostForm = true;"> Add Posts</a></li>
+            <li><a class="nav-link" (click)="removeForms();showQuizForm = true;"> Add Quizzes</a></li>
+            <li><a class="nav-link" (click)="removeForms();showOnThisDayForm = true;"> Add Events</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container body-content">
+    <div class="row">
+        <div class="col-xs-6">
+            <form *ngIf="showPlayerForm" (ngSubmit)="addPlayers(players)" #playerForm="ngForm">
+                <div class="form-group">
+                    <label for="players" class="text-center">Add Players</label>
+                    <textarea type="text" class="form-control" id="players" required [(ngModel)]="players" name="players" rows="20" cols="20"> </textarea>
+                </div>
+                <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+
+            <form *ngIf="showTeamForm" (ngSubmit)="addTeams(teams)" #teamForm="ngForm">
+                <div class="form-group">
+                    <label for="players" class="text-center">Add Teams</label>
+                    <textarea type="text" class="form-control" id="teams" required [(ngModel)]="teams" name="teams" rows="20" cols="20"> </textarea>
+                </div>
+                <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+
+            <form *ngIf="showPostForm" (ngSubmit)="addPosts(posts)" #postForm="ngForm">
+                <div class="form-group">
+                    <label for="players" class="text-center">Add Posts</label>
+                    <textarea type="text" class="form-control" id="posts" required [(ngModel)]="posts" name="posts" rows="20" cols="20"> </textarea>
+                </div>
+                <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+
+            <form *ngIf="showOnThisDayForm" (ngSubmit)="addOnThisDays(onThisDays)" #onThisDayForm="ngForm">
+                <div class="form-group">
+                    <label for="players" class="text-center">Add Events</label>
+                    <textarea type="text" class="form-control" id="onThisDays" required [(ngModel)]="onThisDays" name="onThisDays" rows="20" cols="20"> </textarea>
+                </div>
+                <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+
+            <form *ngIf="showQuizForm" (ngSubmit)="addQuizzes(quizzes)" #quizForm="ngForm">
+                <div class="form-group">
+                    <label for="players" class="text-center">Add Quizzes</label>
+                    <textarea type="text" class="form-control" id="quizzes" required [(ngModel)]="quizzes" name="quizzes" rows="20" cols="20"> </textarea>
+                </div>
+                <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+        </div>
+
+        <div class="col-xs-6">
+            <div *ngIf="showTeamForm"> </div>
+            <div *ngIf="showPlayerForm"> </div>
+            <div *ngIf="showPostForm"> </div>
+            <div *ngIf="showOnThisDayForm"> </div>
+            <div *ngIf="showQuizForm"> </div>
+        </div>
+    </div>
+</div>
+
+

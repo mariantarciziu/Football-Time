@@ -1,0 +1,9 @@
+ <div class="thumbnail" (click)="openPlayerProfile()">
+     <img *ngIf="player.imageSource" src="{{player.imageSource}}" alt="">    
+     <img *ngIf="!player.imageSource" src="https://images2.imgbox.com/62/76/R3Sibibm_o.jpg" alt="">
+     <div class="title text-center"> {{player.name}} </div>
+     <div class="overlay">
+         <div class="text text-center">View Profile</div>
+     </div>
+ </div>
+

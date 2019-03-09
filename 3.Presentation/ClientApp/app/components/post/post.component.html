@@ -1,0 +1,18 @@
+<div class="element-container">
+    <div class="row">
+
+        <div class="col-xs-6 col-sm-4 col-md-3 picture-container" (click)="openPostProfile()">
+            <div class="thumbnail">
+                <img *ngIf="post.imageSource" src="{{post.imageSource}}" alt="">
+                <img *ngIf="!post.imageSource" src="https://images2.imgbox.com/92/77/FPyWGbNp_o.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="col-xs-6 col-sm-8 col-md-9 content-container">
+            <div class="title" (click)="openPostProfile()">{{post.title}}</div>
+            <div class="description"> {{post.body | removeTagsFilter}} </div>
+            <div class="date">{{post.date | date: 'd MMM y'}}</div>
+        </div>
+
+    </div>
+</div>

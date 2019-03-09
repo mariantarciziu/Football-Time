@@ -1,0 +1,31 @@
+<div class="title">{{team.name}}</div>
+<div class="content">
+    <div class="row">
+        <div class="col-xs-12 col-sm-5 col-md-6">
+            <div class="thumbnail">
+                <img *ngIf="team.imageSource" src="{{team.imageSource}}" alt="">
+                <img *ngIf="!team.imageSource" src="https://images2.imgbox.com/92/77/FPyWGbNp_o.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-7 col-md-6">
+            <p><span>Name: </span>{{team.name}}</p>
+            <p><span>League: </span>{{team.league}}</p>
+            <p><span>Country: </span>{{team.country}}</p>
+        </div>
+    </div>
+
+</div>
+
+<div *ngIf="players.length > 0" class="title">Players</div>
+<div *ngIf="players.length > 0" class="content">
+    <div class="row">
+        <div *ngIf='players && players.length'>
+            <player class="col-xs-6 col-sm-6 col-md-4 col-lg-3" [player]="player" *ngFor='let player of players'></player>
+        </div>
+    </div>  
+</div>
+
+
+
+

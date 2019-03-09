@@ -1,0 +1,17 @@
+<div class="element-container">
+    <div class="row">
+        <div class="col-xs-6 col-md-6 picture-container" (click)="openQuizProfile()">
+            <div class="thumbnail">
+                <img *ngIf="quiz.imageSource" src="{{quiz.imageSource}}" alt="">
+                <img *ngIf="!quiz.imageSource" src="https://images2.imgbox.com/92/77/FPyWGbNp_o.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="col-xs-6 col-md-6 content-container">
+            <div class="title" (click)="openQuizProfile()">{{quiz.title}}</div>
+        </div>
+
+    </div>
+</div>
+
+

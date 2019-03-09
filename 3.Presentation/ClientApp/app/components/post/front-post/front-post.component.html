@@ -1,0 +1,5 @@
+<div class="thumbnail" (click)="openPostProfile()">
+    <img *ngIf="post.imageSource" src="{{post.imageSource}}" alt="">
+    <img *ngIf="!post.imageSource" src="https://images2.imgbox.com/92/77/FPyWGbNp_o.jpg" alt="">
+    <div class="captionn text-center" (click)="openPostProfile()">{{post.title}}</div>
+</div>

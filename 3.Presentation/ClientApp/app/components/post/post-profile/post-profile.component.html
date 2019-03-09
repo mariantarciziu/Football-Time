@@ -1,0 +1,16 @@
+<div class="content">
+
+    <h3>{{post.title}}</h3>
+
+    <div class="thumbnail">
+        <img *ngIf="post.imageSource" src="{{post.imageSource}}" alt="">
+        <img *ngIf="!post.imageSource" src="https://images2.imgbox.com/92/77/FPyWGbNp_o.jpg" alt="">
+    </div>
+
+    <div class="e2e-inner-html-bound" [innerHTML]="post.body"></div>
+
+</div>
+
+
+
+

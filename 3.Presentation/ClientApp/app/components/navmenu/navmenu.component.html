@@ -1,0 +1,25 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <!--<a class="nav-link navbar-brand" (click)="backToTop()" routerLinkActive="active" [routerLink]="['']">Football Time <span class="sr-only">(current)</span></a>-->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+        </div>
+        <div class="navbar-collapse collapse" data-toggle="collapse" data-target=".navbar-collapse.in">
+            <ul class="nav navbar-nav" (click)="backToTop()">
+                <li ><a class="nav-link"  routerLinkActive="active" [routerLink]="['']">Home <span class="sr-only">(current)</span></a></li>
+                <li><a class="nav-link" routerLinkActive="active" [routerLink]="['/news']"> News</a></li>
+                <li><a class="nav-link" routerLinkActive="active" [routerLink]="['/quizzes']"> Quizzes</a></li>
+                <li ><a class="nav-link" routerLinkActive="active" [routerLink]="['/players']"> Players</a></li>
+                <li ><a class="nav-link" routerLinkActive="active" [routerLink]="['/teams']"> Teams</a></li>
+                <li ><a class="nav-link" routerLinkActive="active" [routerLink]="['/onThisDay']"> On This Day</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+

@@ -1,0 +1,28 @@
+<div class="description">
+    {{question.questionText}}
+</div>
+
+<div class="content">
+
+    <div class="row">
+        <div #answerA id="answerA" (click)="checkAnswer('A', answerA)" class="col-xs-12 col-md-6 text-center">
+            <div class="answer">{{question.answerA}}</div>
+        </div>
+        <div #answerB id="answerB" (click)="checkAnswer('B', answerB)" class="col-xs-12 col-md-6 text-center">
+            <div class="answer">{{question.answerB}}</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div #answerC id="answerC" (click)="checkAnswer('C', answerC)" class="col-xs-12 col-md-6 text-center">
+            <div class="answer">{{question.answerC}}</div>
+        </div>
+        <div #answerD id="answerD" (click)="checkAnswer('D', answerD)" class="col-xs-12 col-md-6 text-center">
+            <div class="answer">{{question.answerD}}</div>
+        </div>
+    </div>
+
+</div>
+
+
+

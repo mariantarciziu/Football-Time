@@ -1,0 +1,5 @@
+<div class="thumbnail" (click)="openOnThisDayProfile()">
+    <img *ngIf="onThisDay.imageSource" src="{{onThisDay.imageSource}}" alt="">
+    <img *ngIf="!onThisDay.imageSource" src="https://images2.imgbox.com/92/77/FPyWGbNp_o.jpg" alt="">
+    <div class="captionn text-center" (click)="openOnThisDayProfile()">{{onThisDay.subject | removeTagsFilter}}</div>
+</div>

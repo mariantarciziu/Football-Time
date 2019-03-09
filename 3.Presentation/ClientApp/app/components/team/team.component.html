@@ -1,0 +1,21 @@
+<div class="thumbnail" (click)="openTeamProfile()">
+    <img *ngIf="team.imageSource" src="{{team.imageSource}}" alt="">
+    <img *ngIf="!team.imageSource" src="https://images2.imgbox.com/92/77/FPyWGbNp_o.jpg" alt="">
+    <div class="title text-center"> {{team.name}} </div>
+    <div class="overlay">
+        <div class="text text-center">View Profile</div>
+    </div>
+</div>
+
+<!--<div class="thumbnail">
+    <img (click)="openTeamProfile()" src="https://www.thesun.co.uk/wp-content/uploads/2017/01/nintchdbpict000292801126.jpg?strip=all&w=960" alt="">        
+    <div class="caption text-center">          
+        <div class="title"> {{team.name}} </div>
+        <div class="league">{{team.league}}</div>
+         <p style="text-align:center">
+             <a class="btn btn-primary" (click)="openTeamProfile()">Profile</a>
+         </p>
+    </div>
+</div>-->
+
+

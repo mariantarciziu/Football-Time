@@ -1,0 +1,22 @@
+﻿.body-content{
+    margin-top:50px;
+    margin-bottom:30px;
+}
+
+.img-responsive {
+    margin-top: 0px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 767px) {
+    .body-content {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .img-responsive {
+        margin-top: 35px;
+    }
+}

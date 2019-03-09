@@ -1,0 +1,17 @@
+<div class="element-container">
+    <div class="row">
+
+        <div class="col-xs-6 col-sm-4 col-md-3 picture-container" (click)="openOnThisDayProfile()">
+            <div class="thumbnail">
+                <img *ngIf="onThisDay.imageSource" src="{{onThisDay.imageSource}}" alt="">
+                <img *ngIf="!onThisDay.imageSource" src="https://images2.imgbox.com/92/77/FPyWGbNp_o.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="col-xs-6 col-sm-8 col-md-9 content-container">
+            <div class="title" (click)="openOnThisDayProfile()">{{onThisDay.subject | removeTagsFilter}}</div>
+        </div>
+
+    </div>
+</div>
+

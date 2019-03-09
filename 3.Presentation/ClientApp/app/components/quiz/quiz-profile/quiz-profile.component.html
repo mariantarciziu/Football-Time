@@ -1,0 +1,38 @@
+<div class="content">
+
+    <div class="title"> {{quiz.title}} </div>
+
+    <div class="thumbnail">
+        <img *ngIf="quiz.imageSource" src="{{quiz.imageSource}}" alt="">
+        <img *ngIf="!quiz.imageSource" src="https://images2.imgbox.com/92/77/FPyWGbNp_o.jpg" alt="">
+    </div>
+
+    <div class="quiz">
+        <div class="row">
+            <div class="col-xs-12">
+
+                <div *ngIf="!start" class="text text-center" (click)="startQuiz()">
+                    <a class="btn btn-primary start-button">BEGIN QUIZ!</a>
+                </div>
+
+                <div *ngIf="start && index < quiz.questions.length">
+                    <question (corectAnswer)="corectAnswer($event)" [question]="quiz.questions[index]"></question>
+                </div>
+
+                <div *ngIf="index == quiz.questions.length" class="final-score">
+                    <p>Your score:</p>
+                    <p>{{numberOfCorectAnswers}} / {{quiz.questions.length}}</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+

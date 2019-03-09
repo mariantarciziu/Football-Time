@@ -1,0 +1,20 @@
+<div *ngIf="!loading">
+    <div class="title">Quizzes</div>
+
+    <div class="row">
+        <div *ngIf='quizzes && quizzes.length'>
+            <quiz class="col-xs-12" [quiz]="quiz" *ngFor='let quiz of quizzes'></quiz>
+        </div>
+    </div>
+
+    <div class="pagination-position">
+        <pagination [boundaryLinks]="true" (pageChanged)="pageChanged($event)" [itemsPerPage]="itemsPerPage" [totalItems]="totalItems"
+                    [(ngModel)]="currentPage" class="pagination-sm" previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;"></pagination>
+    </div>
+</div>
+
+<div class="row" *ngIf="loading">
+    <div class="col-xs-12">
+        <loading></loading>
+    </div>
+</div>
