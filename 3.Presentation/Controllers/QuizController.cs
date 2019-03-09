@@ -53,6 +53,8 @@ namespace Presentation.Controllers
         }
 
         [HttpPost("[action]")]
+        [AdminValidator]
+        [ApiExplorerSettings(IgnoreApi = true)]
         public IActionResult Add([FromBody] Quiz quiz)
         {
             QuizService.Add(quiz);
@@ -61,6 +63,8 @@ namespace Presentation.Controllers
         }
 
         [HttpPost("[action]")]
+        [AdminValidator]
+        [ApiExplorerSettings(IgnoreApi = true)]
         public IActionResult AddQuizzes([FromBody] Quiz[] quizzes)
         {
             foreach (var quiz in quizzes)
@@ -72,6 +76,8 @@ namespace Presentation.Controllers
         }
 
         [HttpDelete("{id:int}")]
+        [AdminValidator]
+        [ApiExplorerSettings(IgnoreApi = true)]
         public IActionResult Delete([FromBody] Quiz quiz)
         {
             QuizService.Delete(quiz);
@@ -80,6 +86,8 @@ namespace Presentation.Controllers
         }
 
         [HttpPut("{id:int}")]
+        [AdminValidator]
+        [ApiExplorerSettings(IgnoreApi = true)]
         public IActionResult Update([FromBody] Quiz quiz)
         {
             QuizService.Update(quiz);
