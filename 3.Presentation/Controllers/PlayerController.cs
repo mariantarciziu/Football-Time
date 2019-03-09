@@ -76,6 +76,7 @@ namespace Presentation.Controllers
 
         [HttpPost("[action]")]
         [AdminValidator]
+        [ApiExplorerSettings(IgnoreApi = true)]
         public IActionResult Add([FromBody] Player player)
         {
             PlayerService.Add(player);
@@ -85,6 +86,7 @@ namespace Presentation.Controllers
 
         [HttpPost("[action]")]
         [AdminValidator]
+        [ApiExplorerSettings(IgnoreApi = true)]
         public IActionResult AddPlayers([FromBody] Player[] players)
         {
             foreach (var player in players)
@@ -97,6 +99,7 @@ namespace Presentation.Controllers
 
         [HttpDelete("{id:int}")]
         [AdminValidator]
+        [ApiExplorerSettings(IgnoreApi = true)]
         public IActionResult Delete([FromBody] Player player)
         {
             PlayerService.Delete(player);
@@ -106,6 +109,7 @@ namespace Presentation.Controllers
 
         [HttpPut("{id:int}")]
         [AdminValidator]
+        [ApiExplorerSettings(IgnoreApi = true)]
         public IActionResult Update([FromBody] Player player)
         {
             PlayerService.Update(player);

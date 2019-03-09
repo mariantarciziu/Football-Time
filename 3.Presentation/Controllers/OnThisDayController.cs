@@ -61,6 +61,8 @@ namespace Presentation.Controllers
         }
 
         [HttpPost("[action]")]
+        [ApiExplorerSettings(IgnoreApi = true)]
+        [AdminValidator]
         public IActionResult Add([FromBody] OnThisDay onThisDay)
         {
             OnThisDayService.Add(onThisDay);
@@ -69,6 +71,8 @@ namespace Presentation.Controllers
         }
 
         [HttpPost("[action]")]
+        [ApiExplorerSettings(IgnoreApi = true)]
+        [AdminValidator]
         public IActionResult AddOnThisDays([FromBody] OnThisDay[] events)
         {
             foreach (var onThisDay in events)
@@ -80,6 +84,8 @@ namespace Presentation.Controllers
         }
 
         [HttpDelete("{id:int}")]
+        [AdminValidator]
+        [ApiExplorerSettings(IgnoreApi = true)]
         public IActionResult Delete([FromBody] OnThisDay onThisDay)
         {
             OnThisDayService.Delete(onThisDay);
@@ -88,6 +94,8 @@ namespace Presentation.Controllers
         }
 
         [HttpPut("{id:int}")]
+        [ApiExplorerSettings(IgnoreApi = true)]
+        [AdminValidator]
         public IActionResult Update([FromBody] OnThisDay onThisDay)
         {
             OnThisDayService.Update(onThisDay);

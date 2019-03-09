@@ -62,6 +62,7 @@ namespace Presentation.Controllers
 
         [HttpPost("[action]")]
         [AdminValidator]
+        [ApiExplorerSettings(IgnoreApi = true)]
         public IActionResult Add([FromBody] Post post)
         {
             PostService.Add(post);
@@ -70,6 +71,8 @@ namespace Presentation.Controllers
         }
 
         [HttpPost("[action]")]
+        [AdminValidator]
+        [ApiExplorerSettings(IgnoreApi = true)]
         public IActionResult AddPosts([FromBody] Post[] posts)
         {
             foreach (var post in posts)
@@ -81,6 +84,8 @@ namespace Presentation.Controllers
         }
 
         [HttpDelete("{id:int}")]
+        [AdminValidator]
+        [ApiExplorerSettings(IgnoreApi = true)]
         public IActionResult Delete([FromBody] Post post)
         {
             PostService.Delete(post);
@@ -89,6 +94,8 @@ namespace Presentation.Controllers
         }
 
         [HttpPut("{id:int}")]
+        [AdminValidator]
+        [ApiExplorerSettings(IgnoreApi = true)]
         public IActionResult Update([FromBody] Post post)
         {
             PostService.Update(post);

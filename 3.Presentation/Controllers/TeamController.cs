@@ -61,6 +61,8 @@ namespace Presentation.Controllers
         }
 
         [HttpPost("[action]")]
+        [AdminValidator]
+        [ApiExplorerSettings(IgnoreApi = true)]
         public IActionResult Add([FromBody] Team team)
         {
             TeamService.Add(team);
@@ -69,6 +71,8 @@ namespace Presentation.Controllers
         }
 
         [HttpPost("[action]")]
+        [AdminValidator]
+        [ApiExplorerSettings(IgnoreApi = true)]
         public IActionResult AddTeams([FromBody] Team[] teams)
         {
            foreach(var team in teams)
@@ -80,6 +84,8 @@ namespace Presentation.Controllers
         }
 
         [HttpDelete("{id:int}")]
+        [AdminValidator]
+        [ApiExplorerSettings(IgnoreApi = true)]
         public IActionResult Delete([FromBody] Team team)
         {
             TeamService.Delete(team);
@@ -88,6 +94,8 @@ namespace Presentation.Controllers
         }
 
         [HttpPut("{id:int}")]
+        [AdminValidator]
+        [ApiExplorerSettings(IgnoreApi = true)]
         public IActionResult Update([FromBody] Team team)
         {
             TeamService.Update(team);
