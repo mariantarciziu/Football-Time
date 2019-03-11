@@ -28,6 +28,7 @@ import { PostProfileComponent } from './components/post/post-profile/post-profil
 import { QuestionComponent } from './components/quiz/question/question.component'
 import { QuizComponent } from './components/quiz/quiz.component';
 import { QuizzesListComponent } from './components/quizzes-list/quizzes-list.component';
+import { MobileQuizzesListComponent } from './components/mobilequizzes-list/mobilequizzes-list.component';
 import { QuizProfileComponent } from './components/quiz/quiz-profile/quiz-profile.component';
 import { RemoveTagsFilterPipe } from './pipes/remove-tags-filter.pipe';
 import { RightOnThisDayComponent } from './components/onThisDay/right-onThisDay/right-onThisDay.component';
@@ -56,6 +57,7 @@ import { TeamsService } from './services/teams.service';
         HomeComponent,
         LoadingComponent,
         NavMenuComponent,
+        MobileQuizzesListComponent,
         OnThisDayComponent,
         OnThisDayListComponent,
         OnThisDayProfileComponent,
@@ -98,13 +100,16 @@ import { TeamsService } from './services/teams.service';
                     { path: 'quizzes', component: QuizzesListComponent },
                     { path: 'team/:id', component: TeamProfileComponent },
                     { path: 'player/:id', component: PlayerProfileComponent },
-                    { path: 'quiz/:id', component: QuizProfileComponent },
+                    
                     { path: 'news/:id', component: PostProfileComponent },
                     { path: 'onThisDay/:id', component: OnThisDayProfileComponent },
                     { path: '', component: FirstPageComponent }
                 ]
             },
+            { path: 'quiz/:id', component: QuizProfileComponent },
             { path: 'admin', component: AdminComponent },
+            { path: 'mobilequizzes', component: MobileQuizzesListComponent },
+
             { path: '**', redirectTo: '' }
         ])
     ],
