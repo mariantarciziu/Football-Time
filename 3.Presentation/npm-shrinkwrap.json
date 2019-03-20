@@ -6869,7 +6869,7 @@
       "dev": true
     },
     "nan": {
-      "version": "git+https://github.com/nodejs/nan.git#d113c0282072e7ff4f9dfc98b432fd894b798c2c",
+      "version": "git+https://github.com/nodejs/nan.git#19f08c2394b19a5dbe854020fed0446606d68955",
       "from": "git+https://github.com/nodejs/nan.git"
     },
     "negotiator": {

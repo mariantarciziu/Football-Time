@@ -9,14 +9,17 @@
     border: none;
 }
 
-.start-button{
-    height:100px;
-    width:100%;
+.start-button {
+    height: 100px;
+    width: 100%;
     font-size: 30;
     font-weight: 700;
-    letter-spacing:1px;
+    letter-spacing: 1px;
     padding-top: 35px;
     padding-bottom: 35px;
+    color: white;
+    background-color: #9f3f3f;
+    border-color: #9f3f3f;
 }
 
 .final-score {
