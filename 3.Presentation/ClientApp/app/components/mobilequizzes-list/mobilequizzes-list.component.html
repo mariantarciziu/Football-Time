@@ -7,9 +7,11 @@
         </div>
     </div>
 
-    <div class="pagination-position">
-        <pagination [boundaryLinks]="true" (pageChanged)="pageChanged($event)" [itemsPerPage]="itemsPerPage" [totalItems]="totalItems"
-                    [(ngModel)]="currentPage" class="pagination-sm" previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;"></pagination>
+    <div class="row pagination-position">
+        <div class="col-xs-12 text-center">
+            <pagination [boundaryLinks]="true" (pageChanged)="pageChanged($event)" [itemsPerPage]="itemsPerPage" [totalItems]="totalItems"
+                        [(ngModel)]="currentPage" class="pagination-sm" previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;"></pagination>
+        </div>
     </div>
 </div>
 
