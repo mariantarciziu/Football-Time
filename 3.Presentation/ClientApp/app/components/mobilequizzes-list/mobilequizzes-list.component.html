@@ -1,16 +1,29 @@
 <div *ngIf="!loading">
-    <div class="title">Quizzes</div>
-
-    <div class="row">
-        <div *ngIf='quizzes && quizzes.length'>
-            <quiz class="col-xs-12" [quiz]="quiz" *ngFor='let quiz of quizzes'></quiz>
+    <div class="container  body-content">
+    
+        <div class="row">
+            <div class="col-xs-12">
+                <img src="../../../../wwwroot/banner.jpg" class="img-responsive" />
+            </div>
         </div>
-    </div>
 
-    <div class="row pagination-position">
-        <div class="col-xs-12 text-center">
-            <pagination [boundaryLinks]="true" (pageChanged)="pageChanged($event)" [itemsPerPage]="itemsPerPage" [totalItems]="totalItems"
-                        [(ngModel)]="currentPage" class="pagination-sm" previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;"></pagination>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="title">Quizzes</div>
+
+                <div class="row">
+                    <div *ngIf='quizzes && quizzes.length'>
+                        <quiz class="col-xs-12" [quiz]="quiz" *ngFor='let quiz of quizzes'></quiz>
+                    </div>
+                </div>
+
+                <div class="row pagination-position">
+                    <div class="col-xs-12 text-center">
+                        <pagination [boundaryLinks]="true" (pageChanged)="pageChanged($event)" [itemsPerPage]="itemsPerPage" [totalItems]="totalItems"
+                                    [(ngModel)]="currentPage" class="pagination-sm" previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;"></pagination>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

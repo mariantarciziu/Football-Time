@@ -66,7 +66,7 @@ export class MobileQuizzesListComponent implements OnInit{
     }
 
     ngOnInit(): void {
-        this.getQuizzesPerPage(1, 10);
+        this.getQuizzesPerPage(1, 5);
         document.title = 'Football Time - Quizzes';
     }
 }
