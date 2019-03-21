@@ -21,4 +21,9 @@
 :host ::ng-deep .pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
     background-color: #9f3f3f;
     border-color: #9f3f3f;
+    color: white;
+}
+
+:host ::ng-deep .pagination > li > a, .pagination > li > span {
+    color: #9f3f3f;
 }
