@@ -3,6 +3,7 @@ import { Quiz } from '../../../models/quiz'
 import { QuizService } from '../../../services/quiz.service';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'quiz-profile',
@@ -19,7 +20,7 @@ export class QuizProfileComponent implements OnInit {
     public numberOfCorectAnswers: number = 0;
     public index: number = 0;
 
-    constructor(quizService: QuizService, route: ActivatedRoute, ) {
+    constructor(quizService: QuizService, route: ActivatedRoute, private router: Router) {
         this.quizService = quizService;
 
         this.routeSubscription = route.params
@@ -47,6 +48,15 @@ export class QuizProfileComponent implements OnInit {
             this.numberOfCorectAnswers++;         
         }
         this.index++;
+    }
+
+    public redirectHome(): void {
+        this.router.navigate(['../mobilequizzes']);
+        window.scroll({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        });
     }
 
     public getQuizById(id: any): void {
