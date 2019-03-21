@@ -22,6 +22,17 @@
     border-color: #9f3f3f;
 }
 
+.img-responsive {
+    margin-top: 0px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.all-content {
+    background-color: white;
+}
+
 .final-score {
     font-weight: 700;
     font-size: 24px;
@@ -74,6 +85,7 @@ strong {
     .title{
         font-size: 16px;
         line-height: 18px;
+        margin-bottom: 10px;
     }
 
     p {
