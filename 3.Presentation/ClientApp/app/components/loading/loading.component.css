@@ -51,7 +51,7 @@
         width:52px;
         height: 52px;
         top: calc((100vh/2));
-        left: calc((100vw/2) - 167px);
+        left: calc((100vw/2) - 7px);
         border-radius: 50%;
         border: 4px solid #000;
         border-color: #9f3f3f transparent #9f3f3f transparent;
@@ -63,7 +63,7 @@
             width: 36px;
             height: 36px;
             top: calc((100vh/2) + 8px);
-            left: calc((100vw/2) - 160px);
+            left: calc((100vw/2));
             border-color: transparent #333 transparent #333;
             -webkit-animation: lds-dual-ring_reverse 1.5s linear infinite;
             animation: lds-dual-ring_reverse 1.5s linear infinite;
