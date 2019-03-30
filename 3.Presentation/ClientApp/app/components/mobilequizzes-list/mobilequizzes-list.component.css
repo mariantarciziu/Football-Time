@@ -27,3 +27,8 @@
 :host ::ng-deep .pagination > li > a, .pagination > li > span {
     color: #9f3f3f;
 }
+
+.body-content {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}

@@ -15,6 +15,8 @@ import { MobileQuizzesListComponent } from './components/mobilequizzes-list/mobi
 import { QuizProfileComponent } from './components/quiz/quiz-profile/quiz-profile.component';
 import { QuizService } from './services/quiz.service';
 
+import { NavMenuComponent } from './components/navmenu/navmenu.component';
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -23,7 +25,8 @@ import { QuizService } from './services/quiz.service';
         QuestionComponent,
         QuizComponent,
         QuizzesListComponent,
-        QuizProfileComponent
+        QuizProfileComponent,
+        NavMenuComponent
     ],
     imports: [
         CommonModule,
@@ -36,7 +39,7 @@ import { QuizService } from './services/quiz.service';
             {
                 path: '', component: MobileQuizzesListComponent,
                 children: [
-                    { path: 'quizzes', component: QuizzesListComponent },
+                    { path: 'randomquiz', component: QuizzesListComponent },
                 ]
             },
             { path: 'quiz/:id', component: QuizProfileComponent },
